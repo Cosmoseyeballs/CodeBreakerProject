@@ -59,7 +59,7 @@ function setMessage(msg) {
 
 function validateInput(input) {
 
-    if (input == !4) {
+    if (input != 4) {
         message.innerHTML = "Guesses must be exactly 4 characters long.";
         return false;
     }
@@ -79,7 +79,7 @@ function getResults() {
         } else if (answer.value.includes(userGuess.value[i])) {
             console.log("character is in the answer but isn't in the right position");
             position += '<span class="glyphicon glyphicon-transfer"></span>';
-        } else if (!answer.value.includes(userGuess.value[i])) {
+        } else{
             console.log("if the number isn't in the answer at all");
             position += '<span class="glyphicon glyphicon-remove"></span>';
         }
